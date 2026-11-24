@@ -261,6 +261,46 @@
   }
 }
 
+@keyframes gallery-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes gallery-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(48px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes gallery-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-48px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes gallery-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.gallery-fade {
+  animation: gallery-fade 0.25s ease-out both;
+}
+
 @keyframes reveal-up {
   from {
     opacity: 0;

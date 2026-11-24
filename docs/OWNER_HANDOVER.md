@@ -20,16 +20,14 @@
 
 ## Produktfotos – wichtig
 
-Auf Wunsch werden für 9 Produkte die freigestellten Bilder aus der **bereitgestellten Produkt-Collage** verwendet. Diese Collage ist **kein echtes Foto**; sie weicht von den echten Verpackungen im Laden ab, z. B.:
+**10 Produkte** nutzen die **offiziellen Produktbilder von Bandido** (bandidocosmetics.com). Bandido hat der Nutzung zugestimmt – bitte diese Zustimmung (E-Mail/Nachricht) aufbewahren. Betroffen: Aqua Wax, Hair Spray Extra Volume, Sea Salt Spray, Tonic Grooming, Luxury Barber Powder (260 g / 9.17 oz) und die Colognes Lemon, Las Vegas, Moscow, Berlin, Sydney.
 
-- Powder: Collage „290 g / 9.17 oz“ – echtes Etikett **200 g**; zweite Flasche „BEARED POWDER“ (gibt es so nicht, wird nicht verwendet)
-- Beard Oil: Collage „BEAND OIL“ (Schreibfehler) und „Professional Beard Oil“
-- Totenkopf-Figuren tragen in der Collage Sonnenbrillen – auf den echten Verpackungen nicht
-- Colognes: Nummern vertauscht (Collage Berlin 1 / Moscow 4 / Sydney 2 – echt: Berlin 6, Moscow 2, Sydney 7)
+Für **2 Produkte** gibt es kein offizielles Bild; sie nutzen noch Freisteller aus der bereitgestellten Produkt-**Collage**, die von der echten Verpackung abweicht:
+
+- Beard Oil Rose: Collage „BEAND OIL“ (Schreibfehler); Totenkopf mit Sonnenbrille
 - Skull-Produkt: Collage „Bandido Skull Wax“, echte Verpackung „Hair Styling Powder“
-- Hair Spray: Collage 284 g – echt 260 g
 
-Die **echten** Freisteller aus den Regalfotos liegen unter `public/images/products/original/`. Austausch jederzeit: Admin → Produkte → Produkt → „Neues Foto hochladen“. Am besten mit neuen Fotos vor neutralem Hintergrund.
+Für diese beiden am besten eigene Fotos machen oder Bandido nach Bildern fragen. Die Freisteller aus den Regalfotos liegen unter `public/images/products/original/`. Austausch jederzeit: Admin → Produkte → Produkt → „Neues Foto hochladen“. Am besten mit neuen Fotos vor neutralem Hintergrund.
 
 Nicht verwendet (nicht sauber freistellbar oder nicht real): Bandido Styling Mousse (verdeckt im Regal), blaue Aqua-Wax-Dose 5 (Karton auf dem Deckel), Bandido-Duftanhänger und HANI-Schlüsselanhänger aus der Collage (nicht in den echten Fotos).
 

@@ -11,19 +11,21 @@ export function SectionHeading({
   intro,
   align = "center",
   as: Tag = "h2",
+  id,
 }: {
   eyebrow?: string;
   title: string;
   intro?: string;
   align?: "center" | "left";
   as?: "h1" | "h2";
+  id?: string;
 }) {
   return (
     <div className={cn("mb-10 md:mb-14", align === "center" ? "text-center" : "")}>
       {eyebrow && <p className="eyebrow mb-4">{eyebrow}</p>}
       <div className={cn("flex items-center gap-5", align === "center" ? "justify-center" : "")}>
         {align === "center" && <span aria-hidden className="hidden h-[3px] w-20 rounded-full bg-blue sm:block md:w-28" />}
-        <Tag className="display text-3xl sm:text-4xl md:text-5xl">{title}</Tag>
+        <Tag id={id} className="display text-3xl sm:text-4xl md:text-5xl">{title}</Tag>
         {align === "center" && <span aria-hidden className="hidden h-[3px] w-20 rounded-full bg-red sm:block md:w-28" />}
       </div>
       {align === "left" && <div className="brand-rule mt-5 w-40" aria-hidden />}

@@ -7,17 +7,42 @@ import { listProducts, listServices } from "@/lib/catalog";
 import { InfoBanner, PackageCard, ProductCard, SectionHeading } from "@/components/site/ui";
 import { Reveal } from "@/components/site/Reveal";
 import { DigitalCard } from "@/components/site/DigitalCard";
+import { ShopGallery, type GalleryImage } from "@/components/site/ShopGallery";
 import { telHref } from "@/lib/format";
 import hero from "../../../public/images/shop/hero-theke.webp";
 import stempelkarte from "../../../public/images/merch/stempelkarte.webp";
 
-const GALLERY = [
-  { src: "/images/shop/regal-wachs.webp", alt: "Regal mit Bandido Aqua Wax, Styling-Puder und Colognes im HANI Barbershop", w: 1536, h: 1152 },
-  { src: "/images/shop/theke-led.webp", alt: "Blau beleuchtete Theke im HANI Barbershop", w: 1152, h: 480 },
-  { src: "/images/merch/visitenkarte-gold.webp", alt: "HANI Barbershop Visitenkarte in Gold und Dunkelblau", w: 1100, h: 712 },
-  { src: "/images/shop/regal-haarspray.webp", alt: "Bandido Hair Spray Dosen und Lemon Cologne im Regal", w: 1536, h: 1152 },
-  { src: "/images/shop/regal-cologne.webp", alt: "Bandido Colognes in verschiedenen Farben", w: 1536, h: 1152 },
-  { src: "/images/shop/regal-puder.webp", alt: "Bandido Barber Powder, Beard Oil und Tonic im Regal", w: 1536, h: 1152 },
+const GALLERY: GalleryImage[] = [
+  {
+    src: "/images/shop/innen-salon-total.webp",
+    title: "Der Salon",
+    caption: "Barberplätze unter der leuchtenden Wabendecke.",
+    alt: "Blick in den HANI Barbershop mit blauen Wänden, Barberstühlen, Spiegeln und LED-Wabendecke",
+  },
+  {
+    src: "/images/shop/innen-wartebereich.webp",
+    title: "Wartebereich",
+    caption: "Chesterfield-Sofa, großer Bildschirm und Konsole – Warten wird hier nicht langweilig.",
+    alt: "Wartebereich mit blauem Chesterfield-Sofa, Fernseher und zwei Barberstühlen",
+  },
+  {
+    src: "/images/shop/innen-theke-stuhl.webp",
+    title: "Dein Platz",
+    caption: "Barberstuhl, Theke mit HANI-Logo und die klassische Barber-Pole.",
+    alt: "Barberstuhl mit rot-weiß-blauem Umhang vor der beleuchteten HANI-Theke und Produktregal",
+  },
+  {
+    src: "/images/shop/innen-theke-regal.webp",
+    title: "Theke & Produkte",
+    caption: "Bandido-Pflege und Styling direkt zum Mitnehmen.",
+    alt: "Beleuchtete Theke mit HANI-Wappen neben einem Regal voller Bandido-Produkte",
+  },
+  {
+    src: "/images/shop/innen-weihnachtsbaum.webp",
+    title: "Winter bei HANI",
+    caption: "Zur Weihnachtszeit festlich geschmückt.",
+    alt: "Weihnachtsbaum mit goldenen Kugeln im Vordergrund, dahinter der blaue Salon",
+  },
 ];
 
 export default async function HomePage() {
@@ -85,7 +110,7 @@ export default async function HomePage() {
       {packages.length > 0 && (
         <section className="container-page mt-24 md:mt-32" aria-labelledby="pakete">
           <Reveal>
-            <SectionHeading title="Unsere Pakete" eyebrow="Leistungen" />
+            <SectionHeading id="pakete" title="Unsere Pakete" eyebrow="Leistungen" />
           </Reveal>
           <div className="grid gap-5 md:grid-cols-3">
             {packages.map((s, i) => (
@@ -113,6 +138,7 @@ export default async function HomePage() {
         <section className="container-page mt-24 md:mt-32" aria-labelledby="produkte-heading">
           <Reveal>
             <SectionHeading
+              id="produkte-heading"
               eyebrow="Im Shop erhältlich"
               title="Unsere Produkte"
               intro="Styling- und Pflegeprodukte von Bandido – direkt bei uns im Laden. Frag uns einfach, welches Produkt zu deinen Haaren passt."
@@ -179,17 +205,9 @@ export default async function HomePage() {
       {/* GALLERY */}
       <section className="container-page mt-24 md:mt-32" aria-labelledby="galerie">
         <Reveal>
-          <SectionHeading eyebrow="Einblicke" title="Galerie" />
+          <SectionHeading id="galerie" eyebrow="Einblicke" title="Galerie" intro="Komm rein – so sieht es bei uns in der Höckinger Straße aus." />
         </Reveal>
-        <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 [&>*]:mb-4">
-          {GALLERY.map((g) => (
-            <Reveal key={g.src}>
-              <figure className="overflow-hidden rounded-2xl border border-line">
-                <Image src={g.src} alt={g.alt} width={g.w} height={g.h} sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw" className="h-auto w-full transition-transform duration-700 hover:scale-[1.03]" />
-              </figure>
-            </Reveal>
-          ))}
-        </div>
+        <ShopGallery images={GALLERY} />
       </section>
 
       {/* VISIT */}
