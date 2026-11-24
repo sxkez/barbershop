@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { CalendarDays, Menu, Phone, X } from "lucide-react";
 import { Logo } from "./Logo";
 import { NAV } from "./nav";
@@ -88,7 +89,9 @@ export function Header({ phone }: { phone: string }) {
         </button>
       </div>
 
-      {open && (
+      {/* Rendered into <body>: the header's backdrop-blur would otherwise trap the fixed overlay inside the header. */}
+      {open &&
+        createPortal(
         <div
           id="mobile-menu"
           role="dialog"
@@ -130,8 +133,9 @@ export function Header({ phone }: { phone: string }) {
               <Phone className="size-5" aria-hidden /> {phone}
             </a>
           </div>
-        </div>
-      )}
+        </div>,
+          document.body,
+        )}
     </header>
   );
 }
