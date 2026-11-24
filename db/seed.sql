@@ -117,7 +117,4 @@ values
      '/images/products/bandido-luxury-barber-powder-official.webp', 'Schwarze Flasche Bandido Luxury Barber Powder', 'Offizielles Produktbild von Bandido (Nutzung vom Hersteller genehmigt).', true, 80),
   ('hani-kugelschreiber', (select id from product_categories where slug = 'merch'), 'HANI', 'HANI Barbershop Kugelschreiber', null, null, null, null,
      'Blauer Kugelschreiber mit HANI BARBERSHOP Aufdruck.',
-     '/images/merch/kugelschreiber.webp', 'Blauer Kugelschreiber mit Aufdruck HANI BARBERSHOP in der Hand', 'Original-Foto.', false, 200),
-  ('hani-auto-duftanhaenger', (select id from product_categories where slug = 'merch'), 'HANI', 'HANI Auto-Duftanhänger', null, null, null, null,
-     'Duftanhänger fürs Auto im HANI-Design.',
-     '/images/merch/duftanhaenger.webp', 'HANI Barbershop Auto-Duftanhänger in Verpackung', 'Original-Foto.', false, 210);
+     '/images/merch/kugelschreiber-cutout-official.webp', 'Blauer Kugelschreiber mit silbernem Clip und Aufdruck HANI BARBERSHOP', 'Produktfoto vom Inhaber.', false, 200);

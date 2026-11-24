@@ -35,13 +35,23 @@ export default async function ProduktePage() {
       {merch.length > 0 && (
         <section id="merch" className="mt-28" aria-labelledby="merch-h">
           <SectionHeading eyebrow="Unser Merch" title="HANI Merchandise" intro="Kleine Extras im HANI-Look – vor Ort im Shop." />
-          <div className="grid gap-5 md:grid-cols-2">
+          <div className={merch.length === 1 ? "mx-auto grid max-w-2xl gap-5" : "grid gap-5 md:grid-cols-2"}>
             {merch.map((m) => (
               <Reveal key={m.id}>
                 <article className="card grid h-full overflow-hidden sm:grid-cols-[1fr_1.1fr]">
                   {m.imagePath && (
-                    <div className="relative aspect-square sm:aspect-auto">
-                      <Image src={m.imagePath} alt={m.imageAlt ?? productTitle(m)} fill sizes="(min-width: 768px) 25vw, 100vw" className="object-cover" />
+                    <div className={`relative aspect-square sm:aspect-auto ${m.imagePath.includes("-official") ? "product-stage" : ""}`}>
+                      <Image
+                        src={m.imagePath}
+                        alt={m.imageAlt ?? productTitle(m)}
+                        fill
+                        sizes="(min-width: 768px) 25vw, 100vw"
+                        className={
+                          m.imagePath.includes("-official")
+                            ? "object-contain p-8 drop-shadow-[0_18px_24px_rgba(0,0,0,0.6)]"
+                            : "object-cover"
+                        }
+                      />
                     </div>
                   )}
                   <div className="flex flex-col p-6">
